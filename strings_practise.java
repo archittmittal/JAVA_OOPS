@@ -1,4 +1,47 @@
 public class strings_practise {
+
+    public static void vowel(String str){
+        str = str.toLowerCase();
+        for (int i = 0 ; i<str.length() ; i++){
+            char ch = str.charAt(i);
+            if(ch == 'a' || ch == 'e' || ch =='i' || ch =='o' || ch=='u'){
+                System.out.println("Vowels present are: " + ch);
+            }
+
+        }
+    }
+
+    public static int vowelFrequency(String str){
+        int count = 0;
+        str = str.toLowerCase();
+        char[] c = str.toCharArray();
+        for(int i=0 ; i<c.length ; i++){
+            if(c[i] == 'a' || c[i] == 'e' || c[i] == 'i' || c[i] == 'o' || c[i] == 'u'){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static void countEachVowel(String str){
+        str = str.toLowerCase();
+        int countA = 0, countE = 0, countI = 0, countO = 0, countU = 0;
+        
+        for(int i=0 ; i<str.length() ; i++){
+            char ch = str.charAt(i);
+            if(ch == 'a') countA++;
+            else if(ch == 'e') countE++;
+            else if(ch == 'i') countI++;
+            else if(ch == 'o') countO++;
+            else if(ch == 'u') countU++;
+        }
+        System.out.println("Frequency of a: " + countA);
+        System.out.println("Frequency of e: " + countE);
+        System.out.println("Frequency of i: " + countI);
+        System.out.println("Frequency of o: " + countO);
+        System.out.println("Frequency of u: " + countU);
+    }
+
     public static void main(String[] args) {
         String s = "Hello";
         String s1 = "BIE";
@@ -49,7 +92,23 @@ public class strings_practise {
         System.out.println(s.compareTo(s1)); //-ve means s1 greater than s
         System.out.println(s.compareTo(s2)); // all equals
 
+        System.out.println(s.compareToIgnoreCase(s4)); // without case checks lexographic order
 
+
+        // character array
+        // System.err.println(s[0]); not array
+
+        char c [] = s.toCharArray();
+        System.out.println(c[3]);
+        System.out.println(c.length); // this is feature not fxn as in string
+
+        // we have no null character in java chracter array we can add manually
+
+        String str = "mY NAME IS Archit";
+        vowel(str);
+        
+        System.out.println("Frequency of vowels: " + vowelFrequency(str));
+        countEachVowel(str);
     }
     
 }
