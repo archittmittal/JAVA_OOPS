@@ -109,6 +109,15 @@ public class strings_practise {
         
         System.out.println("Frequency of vowels: " + vowelFrequency(str));
         countEachVowel(str);
+
+        //split fxn
+        String s13 = "IAS   Archit Mittal ";
+        String[] s12 = s13.split("\\s+");
+         // space ka aadhr pr split krdega jo hoga fxn me , kitne b space ko to split krdega
+
+        for(String word:s12){
+            System.out.println(word);
+        }
     }
-    
 }
+
