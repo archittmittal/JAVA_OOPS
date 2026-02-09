@@ -44,6 +44,11 @@ public class strings_practise {
         System.out.println(s9.substring(5)); // beginning index ke baad se start krdega
         System.out.println(s9.substring(5,8)); // 6 to 8 chlega si<word<=endinex
 
+        // lexographic comapriosn
+
+        System.out.println(s.compareTo(s1)); //-ve means s1 greater than s
+        System.out.println(s.compareTo(s2)); // all equals
+
 
     }
     
