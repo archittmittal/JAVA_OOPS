@@ -63,6 +63,7 @@ public class WordExample {
             char start = w.charAt(0);
             char end = w.charAt(w.length() - 1);
 
+            
             if (isVowel(start) && isVowel(end)) {
                 vowelWords.append(w).append(" ");
             } else {
