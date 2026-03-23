@@ -1,28 +1,9 @@
+import exceptions.CustomExceptions.DeptIdException;
+import exceptions.CustomExceptions.EmployeeIdException;
+import exceptions.CustomExceptions.NameException;
 import java.util.Scanner;
 
 public class Q15L {
-
-    // Custom Exception for Name
-    static class NameException extends Exception {
-        NameException(String msg) {
-            super(msg);
-        }
-    }
-
-    // Custom Exception for Employee ID
-    static class EmployeeIdException extends Exception {
-        EmployeeIdException(String msg) {
-            super(msg);
-        }
-    }
-
-    // Custom Exception for Department ID
-    static class DeptIdException extends Exception {
-        DeptIdException(String msg) {
-            super(msg);
-        }
-    }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
